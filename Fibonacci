@@ -20,10 +20,7 @@ public class Fibonacci {
             return BigInteger.valueOf(n);
         }
         
-        if (!cache[n].equals(BigInteger.ZERO)) {
-            return cache[n];
-        }
-        
+
         BigInteger tempCache = Fibon(n - 1).add(Fibon(n - 2));
         cache[n] = tempCache;
 
