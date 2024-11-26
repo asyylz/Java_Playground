@@ -1,0 +1,32 @@
+import java.math.BigInteger;
+
+public class Fibonacci {
+
+    private static BigInteger[] cache;
+
+    public static void main(String[] args) {
+        int n = 10;
+        
+        cache = new BigInteger[n + 1];
+        cache[0] = BigInteger.valueOf(0);  
+        cache[1] = BigInteger.valueOf(1); 
+        
+        System.out.println("Fibonacci number at position " + n + " is: " + Fibon(n));
+    }
+
+    private static BigInteger Fibon(int n) {
+   
+        if (n <= 1) {
+            return BigInteger.valueOf(n);
+        }
+        
+        if (!cache[n].equals(BigInteger.ZERO)) {
+            return cache[n];
+        }
+        
+        BigInteger tempCache = Fibon(n - 1).add(Fibon(n - 2));
+        cache[n] = tempCache;
+
+        return cache[n];
+    }
+}
