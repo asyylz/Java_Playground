@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class LoginProgram {
 
     public static void main(String[] args) {
+
         User user = new User("asiye", "passw@rd"); // Initialised  a User object
 
         Users usersAndPasswords = new Users(user);  // Initialised Users object with User object
@@ -79,6 +80,7 @@ public class LoginProgram {
         } // end switch
 
     }
+
 
 }
 
