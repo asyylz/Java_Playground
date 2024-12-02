@@ -19,7 +19,7 @@ public class Car extends LandVehicle implements  IMaintenance {
 
     @Override
     public double calculateFuelEfficiency() {
-        return  (double) mileage / weight * 0.8;
+        return  (double) this.getMileage() / this.getWeight() * 0.8;
     }
 
     @Override

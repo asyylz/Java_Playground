@@ -15,6 +15,6 @@ public class Van extends LandVehicle{
 
     @Override
     public double calculateFuelEfficiency() {
-        return  (double) mileage / weight * 1.8;
+        return  (double) this.getMileage() / this.getWeight() * 1.8;
     }
 }

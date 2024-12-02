@@ -18,7 +18,7 @@ public class MotorBike extends LandVehicle implements IMaintenance {
 
     @Override
     public double calculateFuelEfficiency() {
-        return (double) mileage / weight * 1.2;
+        return (double) this.getMileage() / this.getWeight() * 1.2;
     }
 
     @Override
@@ -29,7 +29,7 @@ public class MotorBike extends LandVehicle implements IMaintenance {
 
     @Override
     public void service() {
-        System.out.println("Service Motorbike");
+        System.out.println("Motorbike needs to be taken service.");
 
     }
 }

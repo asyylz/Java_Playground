@@ -1,15 +1,15 @@
 import java.time.Year;
 
-public abstract class  LandVehicle  {
-    int numberOfWheels;
-    String fuelType;
-    String make;
-    String model;
-    String color;
-    int maxSpeed;
-    long mileage;
-    long weight;
-    int year;
+public abstract class LandVehicle {
+    private int numberOfWheels;
+    private String fuelType;
+    private String make;
+    private String model;
+    private String color;
+    private int maxSpeed;
+    private long mileage;
+    private long weight;
+    private int year;
 
     public LandVehicle(int numberOfWheels, String fuelType,
                        String make, String model, String color, int maxSpeed,
@@ -97,11 +97,12 @@ public abstract class  LandVehicle  {
         this.year = year;
     }
 
-    public int calculateAge(int year){
-        return Year.now().getValue()-year;
+    public int calculateAge(int year) {
+        return Year.now().getValue() - year;
     }
 
     public abstract String stopAtService();
+
     public abstract double calculateFuelEfficiency();
 
 }
