@@ -2,6 +2,7 @@ public class Users {
     private User[] usersAndPasswords; // Arrays are fixed size
 
     public Users(User userData) {
+
         this.usersAndPasswords = new User[]{userData};
     }
 
@@ -14,6 +15,7 @@ public class Users {
 
 
     public User findUser(String username) {
+
         for (int i = 0; i < usersAndPasswords.length; i++) {
             if (username.equals(usersAndPasswords[i].getUsername().toLowerCase())) {
 
