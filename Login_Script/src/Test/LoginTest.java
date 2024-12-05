@@ -30,10 +30,17 @@ public class LoginTest {
         multipleUsers.registerUser(user2);
         assertEquals(user2.getUsername(), multipleUsers.findUser("janesmith").getUsername());
 
-        assertEquals(2, multipleUsers.getUsersAndPasswords().length); 
+        assertEquals(2, multipleUsers.getUsersAndPasswords().length);
 
         assertEquals("JaneSmith", multipleUsers.getUsersAndPasswords()[1].getUsername());
         assertEquals("securePass!", multipleUsers.getUsersAndPasswords()[1].getPassword());
     }
+
+    // User class getter  should return user data
+    @Test
+    void getUser() {
+        assertEquals("JohnDoe", user1.getUsername());
+    }
+
 
 }
