@@ -44,5 +44,8 @@ public class Users {
         usersAndPasswords = newUsersArray;
     } // end register
 
+    public User[] getUsersAndPasswords() {
+        return usersAndPasswords;
+    }
 }
 
