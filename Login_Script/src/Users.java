@@ -6,12 +6,14 @@ public class Users {
         this.usersAndPasswords = new User[]{userData};
     }
 
-    public void displayUsers() {
+    public String displayUsers() {
+        StringBuilder result = new StringBuilder();
         for (User user : usersAndPasswords) {
-            System.out.println("Username: " + user.getUsername() +
-                    ", Password: " + user.getPassword());
+            result.append("Username: ").append(user.getUsername())
+                    .append(", Password: ").append(user.getPassword()).append("\n");
         }
-    } // end disPlayUsers
+        return result.toString();
+    }// end disPlayUsers
 
 
     public User findUser(String username) {

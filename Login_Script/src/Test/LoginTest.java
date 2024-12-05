@@ -14,4 +14,11 @@ public class LoginTest {
         assertEquals(new User("", "").getUsername(), multipleUsers.findUser("JaneDoe").getUsername());
     }
 
+    // displayUsers method should print structured  output
+    @Test
+    void displayUser() {
+        String expected = "Username: JohnDoe, Password: password123\n";
+        assertEquals(expected, multipleUsers.displayUsers());
+    }
+
 }
