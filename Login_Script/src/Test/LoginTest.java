@@ -30,7 +30,7 @@ public class LoginTest {
         multipleUsers.registerUser(user2);
         assertEquals(user2.getUsername(), multipleUsers.findUser("janesmith").getUsername());
 
-        assertEquals(2, multipleUsers.getUsersAndPasswords().length); /// why i cant get length of the array
+        assertEquals(2, multipleUsers.getUsersAndPasswords().length); 
 
         assertEquals("JaneSmith", multipleUsers.getUsersAndPasswords()[1].getUsername());
         assertEquals("securePass!", multipleUsers.getUsersAndPasswords()[1].getPassword());
